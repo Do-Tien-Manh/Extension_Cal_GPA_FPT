@@ -1,0 +1,41 @@
+{
+    "name": "CAL GPA Extension",
+    "version": "0.0.1",
+    "manifest_version": 2,
+    "description" : "Extension for FAP",
+    "icons": {
+        "16": "images/icon.png",
+        "48": "images/icon.png"
+    },
+    "browser_action": {
+        "default_icon": {
+            "19": "images/icon.jpg",
+            "38": "images/icon.jpg"
+        },
+        "default_title": "GPA FPT",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "page": "background.html",
+        "persistent": false
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "*://fap.fpt.edu.vn/Grade/*"
+            ],
+            "js": [
+                "scripts/CalGPA.js"
+            ],
+            "css": [
+                "styles/style.css"
+            ],
+            "run_at": "document_idle"
+        }
+    ],
+    "permissions": [
+        "clipboardWrite",
+        "storage"
+    ]
+
+}
