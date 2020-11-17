@@ -1,7 +1,7 @@
 //properties not include GPA
 const NOT_IS_CREDIT = ["0",""];
 const NOT_SUBJECT_START_CODE = ["VOV"];
-//properties
+//properties include GPA
 const STATUS = "Passed";
 
 
