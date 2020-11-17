@@ -4,8 +4,8 @@
     "manifest_version": 2,
     "description" : "Extension for FAP",
     "icons": {
-        "16": "images/icon.png",
-        "48": "images/icon.png"
+        "16": "images/icon.jpg",
+        "48": "images/icon.jpg"
     },
     "browser_action": {
         "default_icon": {
