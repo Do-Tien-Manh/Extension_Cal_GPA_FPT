@@ -19,7 +19,7 @@ const STATUS = "Passed";
 // }
 
 /**
- * check condition to find 
+ * check condition
  */
 function checkCondition(element){
     // let x = element.childNodes[8].hasChildNodes();
@@ -36,7 +36,7 @@ function checkCondition(element){
 
     if(element.childNodes[3].innerText.trim().startsWith(NOT_SUBJECT_START_CODE[0])){
         return false;
-    }else if(element.childNodes[9].childNodes[0].innerText.trim() != "Passed"){
+    }else if(element.childNodes[9].childNodes[0].innerText.trim() != STATUS){
         return false;
     }else if(element.childNodes[8].childNodes[0].innerText.trim() == ""){
         return false;
@@ -51,7 +51,7 @@ function checkCondition(element){
 
 
 /**
- * 
+ * calculator GPA
  */
 function calGPA(){
     let totalPoint = 0;
@@ -61,15 +61,19 @@ function calGPA(){
 
     for(let i = 0 ;i < allTrElement.length; i++){
         if(checkCondition(allTrElement[i])){
-            let point = allTrElement[i].childNodes[8].childNodes[0].innerText;
-            totalPoint += parseFloat(point);
-            totalRecord++;
+            let point = allTrElement[i].childNodes[8].childNodes[0].innerText.trim();
+            let credit = allTrElement[i].childNodes[7].innerText.trim();
+            totalPoint += parseFloat(point)*credit;
+            totalRecord  += parseFloat(credit);
         }
     }
     return Math.round(totalPoint*100/totalRecord)/100;
 
 }
 
+/**
+ * create element
+ */
 function createHTML(){
     let element = document.createElement("span");
     element.className = "label label-default";
@@ -78,7 +82,7 @@ function createHTML(){
 }
 
 /**
- * 
+ * inject html to page
  */
 function injectHtml(){
     let elem = document.getElementById("ctl00_mainContent_lblRollNumber");
