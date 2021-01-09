@@ -1,6 +1,6 @@
 //properties not include GPA
 const NOT_IS_CREDIT = ["0",""];
-const NOT_SUBJECT_START_CODE = ["VOV124","VOV134","VOV114","LAB101","LAB101","LAB211","LAB221","LAB231"];
+const NOT_SUBJECT_START_CODE = ["VOV124","VOV134","VOV114","LAB101","LAB101","LAB211","LAB221","LAB231","OJS201","SYB301"];
 //properties include GPA
 const STATUS = "Passed";
 
