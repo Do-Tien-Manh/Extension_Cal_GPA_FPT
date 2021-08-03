@@ -1,6 +1,10 @@
 //properties not include GPA
 const NOT_IS_CREDIT = ["0",""];
+<<<<<<< HEAD
 const NOT_SUBJECT_START_CODE = ["VOV124","VOV134","VOV114","LAB101","LAB101","LAB211","LAB221","LAB231","OJS201"];
+=======
+const NOT_SUBJECT_START_CODE = ["VOV124","VOV134","VOV114","LAB101","LAB101","LAB211","LAB221","LAB231","OJS201","SYB301","FE-000001"];
+>>>>>>> c141540b3c6c3767a6c61cfa7d8282edfab19770
 //properties include GPA
 const STATUS = "Passed";
 
@@ -66,6 +70,8 @@ function calClassification(gpa){
         classification = "Gioi";
     }else if(gpa >= 7){
         classification = "Kha";
+    }else if(gpa >= 6){
+        classification = "Trung Binh Kha";
     }else if(gpa >= 5){
         classification = "Trung Binh";
     }
